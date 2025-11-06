@@ -185,3 +185,5 @@ evaluation/pg19/results
 *.egg-info/# pixi environments
 .pixi/*
 !.pixi/config.toml
+
+*.out
