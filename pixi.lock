@@ -126,14 +126,14 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/b2/fe/81695a1aa331a842b582453b605175f419fe8540355886031328089d840a/sympy-1.13.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d0/c6/dc3a0db5a6766416c32c034286d7c2d406da1f498e4de04ab1b8959edd00/tokenizers-0.22.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-      - pypi: https://download.pytorch.org/whl/cu118/torch-2.6.0%2Bcu118-cp310-cp310-linux_x86_64.whl
-      - pypi: https://download.pytorch.org/whl/cu118/torchaudio-2.6.0%2Bcu118-cp310-cp310-linux_x86_64.whl
-      - pypi: https://download.pytorch.org/whl/cu118/torchvision-0.21.0%2Bcu118-cp310-cp310-linux_x86_64.whl
+      - pypi: https://download.pytorch.org/whl/cu118/torch-2.7.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl
+      - pypi: https://download.pytorch.org/whl/cu118/torchaudio-2.7.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl
+      - pypi: https://download.pytorch.org/whl/cu118/torchvision-0.22.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/71/d3/c16c3b3cf7655a67db1144da94b021c200ac1303f82428f2beef6c2e72bb/transformers-4.57.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/01/65/3ffa90e158a2c82f0716eee8d26a725d241549b7d7aaf7e4f44ac03ebd89/triton-3.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/8d/a9/549e51e9b1b2c9b854fd761a1d23df0ba2fbc60bd0c13b489ffa518cfcb7/triton-3.3.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/18/67/36e9267722cc04a6b9f15c7f3441c2363321a3ea07da7ae0c0707beb2a9c/typing_extensions-4.15.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/dc/9b/47798a6c91d8bdb567fe2698fe81e0c6b7cb7ef4d13da4114b41d239f65d/typing_inspection-0.4.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/5c/23/c7abc0ca0a1526a0774eca151daeb8de62ec457e77262b66b359c3c7679e/tzdata-2025.2-py2.py3-none-any.whl
@@ -1732,7 +1732,7 @@ packages:
 - pypi: ./
   name: quest
   version: 0.0.1
-  sha256: 5f41dbebdcc57c0dad61310cbe6687f3c434f486539fa0c2c1068ca4c2e1deed
+  sha256: bab8519e228771de4e554ce8124d2fe172708eafba7812220fe4a6d6dcfac187
   requires_dist:
   - transformers>=4.45.2
   - accelerate>=1.0.1
@@ -2012,15 +2012,15 @@ packages:
   version: 1.3.1
   sha256: 2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2
   requires_python: '>=3.7'
-- pypi: https://files.pythonhosted.org/packages/b2/fe/81695a1aa331a842b582453b605175f419fe8540355886031328089d840a/sympy-1.13.1-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl
   name: sympy
-  version: 1.13.1
-  sha256: db36cdc64bf61b9b24578b6f7bab1ecdd2452cf008f34faa33776680c26d66f8
+  version: 1.14.0
+  sha256: e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5
   requires_dist:
   - mpmath>=1.1.0,<1.4
   - pytest>=7.1.0 ; extra == 'dev'
   - hypothesis>=6.70.0 ; extra == 'dev'
-  requires_python: '>=3.8'
+  requires_python: '>=3.9'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/tk-8.6.13-noxft_hd72426e_102.conda
   sha256: a84ff687119e6d8752346d1d408d5cf360dee0badd487a472aa8ddedfdc219e1
   md5: a0116df4f4ed05c303811a837d5b39d8
@@ -2051,13 +2051,15 @@ packages:
   - setuptools-rust ; extra == 'docs'
   - tokenizers[testing] ; extra == 'dev'
   requires_python: '>=3.9'
-- pypi: https://download.pytorch.org/whl/cu118/torch-2.6.0%2Bcu118-cp310-cp310-linux_x86_64.whl
+- pypi: https://download.pytorch.org/whl/cu118/torch-2.7.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl
   name: torch
-  version: 2.6.0+cu118
-  sha256: 715d3b039a629881f263c40d1fb65edac6786da13bfba221b353ef2371c4da86
+  version: 2.7.1+cu118
+  sha256: 89433c62b02ec802d4c0887c867d935887ae8f00d7cc549ecf1c2640d096bd4c
   requires_dist:
   - filelock
   - typing-extensions>=4.10.0
+  - setuptools ; python_full_version >= '3.12'
+  - sympy>=1.13.3
   - networkx
   - jinja2
   - fsspec
@@ -2072,25 +2074,23 @@ packages:
   - nvidia-cusparse-cu11==11.7.5.86 ; platform_machine == 'x86_64' and sys_platform == 'linux'
   - nvidia-nccl-cu11==2.21.5 ; platform_machine == 'x86_64' and sys_platform == 'linux'
   - nvidia-nvtx-cu11==11.8.86 ; platform_machine == 'x86_64' and sys_platform == 'linux'
-  - triton==3.2.0 ; platform_machine == 'x86_64' and sys_platform == 'linux'
-  - setuptools ; python_full_version >= '3.12'
-  - sympy==1.13.1 ; python_full_version >= '3.9'
-  - opt-einsum>=3.3 ; extra == 'opt-einsum'
+  - triton==3.3.1 ; platform_machine == 'x86_64' and sys_platform == 'linux'
   - optree>=0.13.0 ; extra == 'optree'
+  - opt-einsum>=3.3 ; extra == 'opt-einsum'
   requires_python: '>=3.9.0'
-- pypi: https://download.pytorch.org/whl/cu118/torchaudio-2.6.0%2Bcu118-cp310-cp310-linux_x86_64.whl
+- pypi: https://download.pytorch.org/whl/cu118/torchaudio-2.7.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl
   name: torchaudio
-  version: 2.6.0+cu118
-  sha256: c5f0ff8434766f2950d77261b119163dbe8a02bc5c18482d9c0d76c9b18dfd44
+  version: 2.7.1+cu118
+  sha256: effef2c79a95830d11b481f6fbe461312988b49b4c0b3dbe893d0b56d5ce032f
   requires_dist:
-  - torch==2.6.0
-- pypi: https://download.pytorch.org/whl/cu118/torchvision-0.21.0%2Bcu118-cp310-cp310-linux_x86_64.whl
+  - torch==2.7.1
+- pypi: https://download.pytorch.org/whl/cu118/torchvision-0.22.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl
   name: torchvision
-  version: 0.21.0+cu118
-  sha256: aae1fd398fb97a099bd3bd619a85e923c2191d348b90786514c8f81541afd010
+  version: 0.22.1+cu118
+  sha256: 64954400493caf614b5aebded9b5a63eda8753cea9f8a1e32752eb2adc6ed383
   requires_dist:
   - numpy
-  - torch==2.6.0
+  - torch==2.7.1
   - pillow>=5.3.0,!=8.3.*
   - gdown>=4.7.3 ; extra == 'gdown'
   - scipy ; extra == 'scipy'
@@ -2574,18 +2574,20 @@ packages:
   - opentelemetry-exporter-otlp ; extra == 'open-telemetry'
   - opentelemetry-sdk ; extra == 'open-telemetry'
   requires_python: '>=3.9.0'
-- pypi: https://files.pythonhosted.org/packages/01/65/3ffa90e158a2c82f0716eee8d26a725d241549b7d7aaf7e4f44ac03ebd89/triton-3.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+- pypi: https://files.pythonhosted.org/packages/8d/a9/549e51e9b1b2c9b854fd761a1d23df0ba2fbc60bd0c13b489ffa518cfcb7/triton-3.3.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
   name: triton
-  version: 3.2.0
-  sha256: b3e54983cd51875855da7c68ec05c05cf8bb08df361b1d5b69e05e40b0c9bd62
+  version: 3.3.1
+  sha256: b74db445b1c562844d3cfad6e9679c72e93fdfb1a90a24052b03bb5c49d1242e
   requires_dist:
+  - setuptools>=40.8.0
   - cmake>=3.20 ; extra == 'build'
   - lit ; extra == 'build'
   - autopep8 ; extra == 'tests'
-  - flake8 ; extra == 'tests'
   - isort ; extra == 'tests'
   - numpy ; extra == 'tests'
   - pytest ; extra == 'tests'
+  - pytest-forked ; extra == 'tests'
+  - pytest-xdist ; extra == 'tests'
   - scipy>=1.7.1 ; extra == 'tests'
   - llnl-hatchet ; extra == 'tests'
   - matplotlib ; extra == 'tutorials'
