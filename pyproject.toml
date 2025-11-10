@@ -6,26 +6,22 @@ dependencies = [
     # "torch>=2.5.0",
     # "torchaudio>=2.5.0",
     # "torchvision>=0.20.0",
-    "transformers>=4.45.2",
-    "accelerate>=1.0.1",
-    "sentencepiece>=0.2.0",
-    "datasets>=3.0.1",
-    "wandb>=0.18.5",
-    "zstandard>=0.23.0",
-    "matplotlib>=3.9.2",
-    "jieba>=0.42.1",
-    "fuzzywuzzy>=0.18.0",
-    "seaborn>=0.13.2",
-    # "rouge_score>=0.1.2",
-    "rouge",
-    "einops>=0.8.0",
-    "pandas>=2.2.3",
+    # "transformers>=4.45.2",
+    # "accelerate>=1.0.1",
+    # "sentencepiece>=0.2.0",
+    # "datasets>=3.0.1",
+    # "wandb>=0.18.5",
+    # "zstandard>=0.23.0",
+    # "matplotlib>=3.9.2",
+    # "jieba>=0.42.1",
+    # "fuzzywuzzy>=0.18.0",
+    # "seaborn>=0.13.2",
+    # # "rouge_score>=0.1.2",
+    # "rouge",
+    # "einops>=0.8.0",
+    # "pandas>=2.2.3",
     "fastchat>=0.1.0",
-    "numpy>=2.1.2",
-    # Flash Attention
-    "ninja",
-    "packaging",
-    "setuptools"
+    # "numpy>=2.1.2",
 ]
 
 [build-system]
@@ -41,15 +37,31 @@ platforms = ["linux-64"]
 
 [tool.pixi.dependencies]
 cmake = ">=3.26.4"
+ninja = "*"
+cuda-version = "11.8.*"
+pytorch = ">=2.5.0"
+torchaudio = ">=2.5.0"
+torchvision = ">=0.20.0"
+flash-attn = ">=2.6.3"
+transformers = ">=4.45.2"
+accelerate = ">=1.0.1"
+sentencepiece = ">=0.2.0"
+datasets = ">=3.0.1"
+wandb = ">=0.18.5"
+zstandard = ">=0.23.0"
+matplotlib = ">=3.9.2"
+jieba = ">=0.42.1"
+fuzzywuzzy = ">=0.18.0"
+seaborn = ">=0.13.2"
+rouge = "*"
+einops = ">=0.8.0"
+pandas = ">=2.2.3"
+numpy = ">=2.1.2"
 
 [tool.pixi.pypi-dependencies]
 quest = { path = ".", editable = true }
-torch = { version = ">=2.5.0", index = "https://download.pytorch.org/whl/cu118" }
-torchaudio = { version = ">=2.5.0", index = "https://download.pytorch.org/whl/cu118" }
-torchvision = { version = ">=0.20.0", index = "https://download.pytorch.org/whl/cu118" }
-flash-attn = { version = ">=2.6.3, <2.7.4" }
 
-[tool.pixi.pypi-options]
-no-build-isolation = ["flash-attn"]
+[tool.pixi.system-requirements]
+cuda = "11.8"
 
 [tool.pixi.tasks]

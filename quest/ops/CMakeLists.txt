@@ -28,7 +28,8 @@ include(${CMAKE_SOURCE_DIR}/cmake/get_raft.cmake)
 # Fix linking error: https://github.com/pytorch/pytorch/issues/108041
 find_package(Python REQUIRED COMPONENTS Interpreter Development)
 find_package(Torch REQUIRED)
-find_library(TORCH_PYTHON_LIBRARY torch_python PATH "${TORCH_INSTALL_PREFIX}/lib")
+# The fix is not needed for conda packaged PyTorch
+# find_library(TORCH_PYTHON_LIBRARY torch_python PATH "${TORCH_INSTALL_PREFIX}/lib")
 
 # Try combine pybind
 # Check: https://qiita.com/syoyo/items/c3e8e6e5c3e2d69c2325
@@ -42,4 +43,4 @@ target_include_directories(_kernels PRIVATE ${CMAKE_SOURCE_DIR}/../../kernels/in
 target_include_directories(_kernels PRIVATE ${CMAKE_SOURCE_DIR}/../../kernels/3rdparty/flashinfer/include)
 target_include_directories(_kernels PRIVATE ${CMAKE_SOURCE_DIR}/../../kernels/3rdparty/pybind/include)
 target_compile_options(_kernels PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:--expt-extended-lambda --expt-relaxed-constexpr>)
-target_link_libraries(_kernels PRIVATE ${TORCH_LIBRARIES} raft::raft Python::Python pybind11::module ${TORCH_PYTHON_LIBRARY})
+target_link_libraries(_kernels PRIVATE ${TORCH_LIBRARIES} raft::raft Python::Python pybind11::module)
